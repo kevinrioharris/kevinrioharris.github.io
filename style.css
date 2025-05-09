@@ -1,0 +1,319 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; /* White color for logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #10284E; /* Updated hover color */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 2rem;
+    background: linear-gradient(to right, #0d0d0d 60%, #1a1a1a);
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 700px;
+    text-align: center; /* Ensure text inside hero is centered */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #cfcfcf;
+}
+
+.hero p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #aaaaaa;
+}
+
+/* Hero Section Buttons */
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 1rem;
+    justify-content: center; /* Center buttons inside the hero section */
+    align-items: center; /* Center align the buttons */
+}
+
+/* Button styling remains the same */
+.btn.primary, .btn.secondary, .btn.tertiary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #10284E;
+    color: #ffffff;
+    border-color: #10284E;
+}
+
+.btn.primary:hover {
+    background-color: transparent;
+    color: #10284E;
+}
+
+.btn.secondary {
+    background-color: #10284E;
+    color: #ffffff;
+    border-color: #10284E;
+}
+
+.btn.secondary:hover {
+    background-color: transparent;
+    color: #10284E;
+}
+
+.btn.tertiary {
+    background-color: #10284E;
+    color: #ffffff;
+    border-color: #10284E;
+}
+
+.btn.tertiary:hover {
+    background-color: transparent;
+    color: #10284E;
+}
+
+
+/* Adjusting other sections for centering content */
+.about, .projects, .contact, .resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card a {
+    display: block; /* Makes the entire card clickable */
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Removes underline */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Adds scale effect on hover */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
+/* Resume Section */
+.resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left */
+}
+
+.resume-content h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.resume-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.resume-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #aaaaaa;
+}
+
+.resume-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.resume-content ul li {
+    margin-bottom: 6px;
+}
+
+.resume-content a {
+    color: #10284E;
+    text-decoration: none;
+}
+
+.resume-content a:hover {
+    text-decoration: underline;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 3px solid #10284E;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #10284E;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #10284E;
+}
+  
+
+/* Contact Section Buttons */
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.contact-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background 0.3s ease;
+    background-color: #10284E;
+    border: 2px solid #10284E;
+}
+
+.contact-buttons .btn:hover {
+    background-color: transparent;
+    color: #10284E;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+/* Additional styling for spacing */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Add spacing after "My Projects" title */
+.projects h2 {
+    margin-bottom: 3rem; /* Adds spacing after "My Projects" */
+}
+
+/* Download Button Style */
+a.download-button {
+    display: inline-block; /* Make sure the button behaves like a block element for margin */
+    margin-bottom: 20px; /* Adds spacing below the button */
+}
+
+a.download-button button {
+    background-color: #10284E; /* Your preferred color */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.download-button button:hover {
+    background-color: #1a3d71; /* Slightly lighter shade for hover effect */
+    cursor: pointer;
+}
