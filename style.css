@@ -70,12 +70,14 @@ body {
   font-size: 1.6em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .skills-list {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .skills-list li {
