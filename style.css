@@ -14,6 +14,11 @@ body {
 
 /* Navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,17 +28,13 @@ body {
 }
 
 .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center; /* centers the list items horizontally */
     list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff; /* White color for logo */
-}
 
 .nav-links {
     list-style: none;
@@ -49,7 +50,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #10284E; /* Updated hover color */
+    color: #10284E; 
 }
 
 /* Skills Summary */
@@ -87,6 +88,34 @@ body {
   font-weight: 500;
 }
 
+/* About Me Section with Photo */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    text-align: left;
+  }
+  
+  .about-photo img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 7.5px solid #10284E;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .about-text {
+    max-width: 700px;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 /* Hero Section */
 .hero {
     display: flex;
@@ -219,47 +248,85 @@ body {
 }
 
 /* Resume Section */
+
+.resume {
+    padding-top: 100px; /* Adjust so content isn't hidden by fixed navbar */
+  }
+  
 .resume-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resume-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
 .resume-content h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #cccccc;
 }
 
 .resume-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
     color: #ffffff;
+    border-bottom: 1px solid #444;
+}
+
+.resume-content h4 {
+    font-size: 1.1rem;
+    margin: 0px 0;
+    color: #dddddd;
 }
 
 .resume-content p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #aaaaaa;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #bbbbbb;
 }
 
 .resume-content ul {
     list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 20px;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
 }
 
 .resume-content ul li {
-    margin-bottom: 6px;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: #bbbbbb;
 }
 
 .resume-content a {
     color: #10284E;
+    font-weight: 500;
     text-decoration: none;
 }
 
 .resume-content a:hover {
     text-decoration: underline;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #10284E;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #0d1e39;
 }
 
 .timeline {
@@ -269,22 +336,24 @@ body {
     border-left: 3px solid #10284E;
 }
 
+
 .timeline-item {
     position: relative;
     margin-bottom: 30px;
+    padding-left: 20px;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
     left: -33px;
-    top: 0;
+    top: 0px;
     width: 20px;
     height: 20px;
     background-color: #10284E;
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 0 0 0 2px #10284E;
+    box-shadow: 0 0 0 1px #10284E;
 }
   
 
