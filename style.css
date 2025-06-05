@@ -35,13 +35,6 @@ body {
     padding: 0;
 }
 
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
 .nav-links a {
     text-decoration: none;
     color: #ffffff;
@@ -55,16 +48,18 @@ body {
 
 /* Skills Summary */
 .skills-summary {
-  margin-top: 30px;
-  background-color: #131417;
-  padding: 25px 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #2a2d35;
+    margin-top: 30px;
+    background-color: #131417;
+    padding: 10px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #2a2d35;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .skills-summary h3 {
@@ -97,7 +92,9 @@ body {
     gap: 2rem;
     padding: 2rem 0;
     text-align: left;
-  }
+    border-radius: 20px;
+    background: linear-gradient(to right, #0d0d0d 5%, #1a1a1a);
+}
   
   .about-photo img {
     width: 350px;
@@ -114,6 +111,7 @@ body {
   
   .about-text h2 {
     font-size: 2rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
 /* Hero Section */
@@ -121,9 +119,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    padding: 2rem;
-    background: linear-gradient(to right, #0d0d0d 60%, #1a1a1a);
+    height: 50vh;
+    padding: 1rem;
     text-align: left;
 }
 
@@ -133,6 +130,7 @@ body {
 }
 
 .hero h1 {
+    margin-top: 40px;
     font-size: 3rem;
     font-weight: 700;
     color: #ffffff;
@@ -251,11 +249,12 @@ body {
 
 .resume {
     padding-top: 100px; /* Adjust so content isn't hidden by fixed navbar */
-  }
+    background: linear-gradient(to left, #0d0d0d 80%, #1a1a1a);  
+}
   
 .resume-content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: left;
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -363,7 +362,7 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .contact-buttons .btn {
@@ -398,12 +397,12 @@ h3 {
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 /* Add spacing after "My Projects" title */
 .projects h2 {
-    margin-bottom: 3rem; /* Adds spacing after "My Projects" */
+    margin-bottom: 2rem; /* Adds spacing after "My Projects" */
 }
 
 /* Download Button Style */
@@ -428,3 +427,4 @@ a.download-button button:hover {
     background-color: #1a3d71; /* Slightly lighter shade for hover effect */
     cursor: pointer;
 }
+
