@@ -428,106 +428,60 @@ a.download-button button:hover {
     cursor: pointer;
 }
 
-/* Responsive styles for mobile */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    /* Navbar: make it vertical with reduced spacing */
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 0;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-
+    /* Fix navbar overlap */
     .navbar {
-        padding: 1rem;
+        position: fixed;
+        top: 0;
+        padding: 0.5rem 1rem;
     }
 
-    /* Hero Section Buttons (View Projects, View Resume, Contact Me) */
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem; /* Unified spacing between buttons */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
         align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
+    .nav-links li a {
+        padding: 10px;
+    }
+
+    /* Hero spacing fix */
+    .hero {
+        margin-top: 20px; /* Adjust based on actual navbar height */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .btn.btn.secondary{
+        margin-top: 15px;
+    }
     .hero-buttons .btn {
-        width: 90%; /* Same width for all */
-        font-size: 1rem; /* Unified size */
-        padding: 0.75rem 1.5rem; /* Unified padding */
-        text-align: center;
-    }
-
-    .btn.primary,
-    .btn.secondary,
-    .btn.tertiary {
         width: 90%;
-        font-size: 0.95rem;
-        padding: 0.6rem 1rem;
-        text-align: center;
-    }
-
-    /* About Section */
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .about-photo img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .about-text {
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Resume Section */
-    .resume-content {
-        padding: 0 1rem;
-    }
-
-    .resume-content h1 {
-        font-size: 2rem;
-    }
-
-    .resume-content h2 {
-        font-size: 1.3rem;
-    }
-
-    .resume-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .resume-content h4 {
         font-size: 1rem;
+        padding: 1rem 1.5rem;
     }
 
-    /* Project Cards */
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Contact Buttons */
     .contact-buttons {
         flex-direction: column;
-        width: 100%;
+        gap: 10px;
         align-items: center;
     }
 
     .contact-buttons .btn {
         width: 90%;
-        text-align: center;
     }
 }
-
