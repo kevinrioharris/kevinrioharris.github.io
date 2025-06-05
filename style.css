@@ -430,36 +430,36 @@ a.download-button button:hover {
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
-    /* Hero Section */
-    .hero {
+    /* Navbar: make it vertical with reduced spacing */
+    .nav-links {
         flex-direction: column;
-        padding: 2rem 1rem;
-        height: auto;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        width: 100%;
         text-align: center;
     }
 
-    .hero-content {
-        text-align: center;
+    .navbar {
+        padding: 1rem;
     }
 
-    .hero h1 {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
+    /* Hero Section Buttons (View Projects, View Resume, Contact Me) */
     .hero-buttons {
         flex-direction: column;
         width: 100%;
-        gap: 0.75rem;
+        gap: 1rem; /* Unified spacing between buttons */
         align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 90%; /* Same width for all */
+        font-size: 1rem; /* Unified size */
+        padding: 0.75rem 1.5rem; /* Unified padding */
+        text-align: center;
     }
 
     .btn.primary,
@@ -528,22 +528,6 @@ a.download-button button:hover {
     .contact-buttons .btn {
         width: 90%;
         text-align: center;
-    }
-     /* Navbar Responsive Styles */
-     .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 0;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .navbar {
-        padding: 1rem;
     }
 }
 
