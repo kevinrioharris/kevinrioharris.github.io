@@ -31,7 +31,7 @@ body {
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
@@ -40,6 +40,7 @@ body {
     color: #ffffff;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 15px;
 }
 
 .nav-links a:hover {
@@ -103,6 +104,7 @@ body {
     object-fit: cover;
     border: 7.5px solid #10284E;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 1rem;
   }
   
   .about-text {
@@ -119,7 +121,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 80vh;
     padding: 1rem;
     text-align: left;
 }
@@ -159,7 +161,7 @@ body {
 }
 
 /* Button styling remains the same */
-.btn.primary, .btn.secondary, .btn.tertiary {
+.btn.primary, .btn.secondary, .btn.tertiary, .btn.github-btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -203,6 +205,16 @@ body {
     color: #10284E;
 }
 
+.btn.github-btn {
+    background-color: #10284E;
+    color: #ffffff;
+    border-color: #10284E;
+}
+
+.btn.github-btn:hover {
+    background-color: transparent;
+    color: #10284E;
+}
 
 /* Adjusting other sections for centering content */
 .about, .projects, .contact, .resume {
@@ -223,30 +235,91 @@ body {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
+
 
 .project-card {
     background-color: #1a1a1a;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
 }
 
 .project-card a {
-    display: block; /* Makes the entire card clickable */
-    color: inherit; /* Inherit text color */
-    text-decoration: none; /* Removes underline */
+    position: relative;
+    z-index: 2; /* text above overlay */
+    color: inherit;
+    text-decoration: none;
 }
 
-.project-card:hover {
-    transform: scale(1.05); /* Adds scale effect on hover */
-    cursor: pointer; /* Changes cursor to pointer when hovering */
+
+/* Add a dark overlay for readability */
+/* Dark transparent overlay */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(26, 26, 26, 0.95);
+    border-radius: 8px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    background-clip: padding-box;
 }
+
+/* Background images */
+.project-card.hotel {
+    background-image: url('images/hotel-pic.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card.telco {
+    background-image: url('images/customer-churn.jpeg'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card.transjakarta {
+    background-image: url('images/transjakarta-pic.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card.store {
+    background-image: url('images/store.jpeg'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+.project-card:hover::before {
+    background-color: rgba(26, 26, 26, 0.8); /* lighten overlay on hover */
+}
+
+/* Ensure text is centered and aligned similarly */
+.project-card h3,
+.project-card p {
+    text-align: center;
+}
+
 
 /* Resume Section */
-
 .resume {
     padding-top: 100px; /* Adjust so content isn't hidden by fixed navbar */
     background: linear-gradient(to left, #0d0d0d 80%, #1a1a1a);  
@@ -475,6 +548,9 @@ a.download-button button:hover {
         padding: 1rem 1.5rem;
     }
 
+    .btn.btn.github-btn{
+        margin-top: 15px;
+    }
     .contact-buttons {
         flex-direction: column;
         gap: 10px;
