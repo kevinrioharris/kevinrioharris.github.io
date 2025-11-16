@@ -23,7 +23,7 @@ const About = () => {
             
             <div className="quick-stats">
               <div className="stat">
-                <h3>$5,000+</h3>
+                <h3>$10,000+</h3>
                 <p>Cost savings per incident</p>
               </div>
               <div className="stat">

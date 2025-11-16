@@ -6,7 +6,7 @@ export const professionalExperience = [
     position: "Data Scientist",
     period: "Sept 2025 - Now",
     achievements: [
-      "Built an early sheet-break detection model using ML + XAI, enabling 30 - 40 minute earlier warnings and reducing downtime costs by around $5,000 per incident",
+      "Built an early sheet-break detection model using ML + XAI, enabling 30 - 40 minute earlier warnings and reducing downtime costs by around $10,000 per incident",
       "Developed Databricks ETL pipelines processing 10k+ daily records for automated, reliable data loading",
       "Integrated production analytics across Fiber → Mill, improving cross-department visibility and reducing manual reporting time by 40%",
       "Served as part of APRIL’s Analytics Center of Excellence (ACoE), supporting enterprise-wide analytics initiatives",
