@@ -53,7 +53,7 @@ body {
 }
 
 .btn.secondary {
-  background-color: #4b5563;
+  background-color: var(--accent-primary);
   color: white;
 }
 
