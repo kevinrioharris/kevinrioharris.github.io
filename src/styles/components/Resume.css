@@ -1,0 +1,241 @@
+.resume {
+  padding: 120px 0 80px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.resume-content {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid var(--accent-primary);
+  padding-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.resume-header h2 {
+  font-size: 1.5rem;
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.contact-info-resume p {
+  margin: 0.3rem 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.download-button {
+  margin-top: 1.5rem;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.highlighted {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-primary);
+  border: 1px solid var(--border-color);
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume-item-header h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.resume-item-header h5 {
+  color: var(--accent-secondary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.resume-period {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.resume-achievements {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.resume-achievements li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.resume-achievements li:before {
+  content: "▸";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.technologies-resume,
+.project-link-resume {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.technologies-resume strong,
+.project-link-resume strong {
+  color: var(--text-primary);
+}
+
+.project-link-resume a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+.project-link-resume a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.skills-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-category-resume {
+  padding: 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.skill-category-resume strong {
+  color: var(--text-primary);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.8rem;
+}
+
+.certification-item {
+  padding: 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 100px 0 60px;
+  }
+  
+  .resume-content {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+  
+  .resume-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .resume-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .navbar,
+  .download-button,
+  footer {
+    display: none;
+  }
+  
+  .resume {
+    padding: 0;
+    background: white;
+  }
+  
+  .resume-content {
+    box-shadow: none;
+    padding: 1rem;
+    background: white;
+    color: black;
+  }
+  
+  /* Ensure print has good contrast */
+  .resume-header h1,
+  .resume-header h2,
+  .highlighted,
+  .resume-item-header h4,
+  .resume-item-header h5,
+  .skill-category-resume strong {
+    color: black !important;
+  }
+  
+  .resume-achievements li,
+  .technologies-resume,
+  .project-link-resume,
+  .skill-category-resume,
+  .certification-item {
+    color: #333 !important;
+  }
+}
