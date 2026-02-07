@@ -1,0 +1,1447 @@
+Source folder : kevinrioharris.github.io
+Absolute path  : /Users/kevin/Work/kevinrioharris.github.io
+Generated at   : 20260207-153337
+Output file    : kevinrioharris.github.io_combined_20260207-153337.txt
+Recursive tree : True
+Recursive src  : True
+Recursive extra: False
+
+==
+[Folder Structure: kevinrioharris.github.io/]
+[Absolute Path: /Users/kevin/Work/kevinrioharris.github.io]
+==
+
+├── public/
+│   ├── customer-churn.jpeg
+│   ├── hotel-pic.jpeg
+│   ├── index.html
+│   ├── kevin-profile.jpeg
+│   ├── store.jpeg
+│   └── transjakarta-pic.jpeg
+├── src/
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Resume.jsx
+│   │   └── Skills.jsx
+│   ├── data/
+│   │   ├── education.js
+│   │   ├── experience.js
+│   │   ├── projects.js
+│   │   └── skills.js
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   └── ResumePage.jsx
+│   ├── styles/
+│   │   ├── components/
+│   │   │   ├── About.css
+│   │   │   ├── Contact.css
+│   │   │   ├── Education.css
+│   │   │   ├── Experience.css
+│   │   │   ├── Footer.css
+│   │   │   ├── Hero.css
+│   │   │   ├── Navbar.css
+│   │   │   ├── Projects.css
+│   │   │   ├── Resume.css
+│   │   │   └── Skills.css
+│   │   └── App.css
+│   ├── App.jsx
+│   └── index.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+
+==
+[Source Files: .css]
+==
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/App.css]
+==
+/* Global Styles - Dark Theme */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --bg-card: #2d2d2d;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888888;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --border-color: #404040;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn.primary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btn.secondary {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.btn.tertiary {
+  background-color: #059669;
+  color: white;
+}
+
+.btn.github-btn {
+  background-color: #1f2937;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/About.css]
+==
+.about-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-photo {
+  text-align: center;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 3px solid var(--border-color);
+}
+
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stat p {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .about-text h2 {
+    text-align: center;
+  }
+  
+  .quick-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .quick-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Contact.css]
+==
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-buttons .btn {
+    width: 200px;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Education.css]
+==
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education-item {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid #ff6b6b;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.education-title h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.education-title h4 {
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.education-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.education-meta .location {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.education-meta .period {
+  background: #ff6b6b;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.education-details .score,
+.education-details .gpa {
+  background: var(--bg-secondary);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  border-left: 3px solid var(--accent-primary);
+}
+
+.competencies h5,
+.coursework h5,
+.thesis h5 {
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.competencies ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.competencies li {
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.competencies li:before {
+  content: "✓";
+  color: #059669;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.coursework-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-tag {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.thesis p {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .education-meta {
+    align-items: flex-start;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Experience.css]
+==
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent-primary);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experience-title h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.experience-title h4 {
+  color: var(--accent-secondary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.location {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.period {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.achievements {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.achievements li:before {
+  content: "▸";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.organization-experience {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.org-item {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-top: 3px solid #059669;
+  border: 1px solid var(--border-color);
+}
+
+.org-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.org-header h4 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.org-period {
+  background: #059669;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.org-name {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.org-achievements {
+  list-style: none;
+  padding-left: 0;
+}
+
+.org-achievements li {
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.org-achievements li:before {
+  content: "•";
+  color: #059669;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .experience-meta {
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  
+  .organization-experience {
+    grid-template-columns: 1fr;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Footer.css]
+==
+footer {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Hero.css]
+==
+.hero {
+  background: var(--bg-primary);
+  color: white;
+  padding: 150px 0 100px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  position: relative;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.contact-info {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+.social-links span {
+  opacity: 0.7;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.top-buttons,
+.bottom-button {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 0 80px;
+    min-height: 80vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  .top-buttons,
+  .bottom-button {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Navbar.css]
+==
+.navbar {
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Projects.css]
+==
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-color: var(--accent-primary);
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-link {
+  color: var(--accent-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.project-link:hover {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    margin: 0 1rem;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Resume.css]
+==
+.resume {
+  padding: 120px 0 80px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.resume-content {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid var(--accent-primary);
+  padding-bottom: 2rem;
+}
+
+.resume-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.resume-header h2 {
+  font-size: 1.5rem;
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.contact-info-resume p {
+  margin: 0.3rem 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.download-button {
+  margin-top: 1.5rem;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.highlighted {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.resume-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-primary);
+  border: 1px solid var(--border-color);
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume-item-header h4 {
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.resume-item-header h5 {
+  color: var(--accent-secondary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.resume-period {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.resume-achievements {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.resume-achievements li {
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.resume-achievements li:before {
+  content: "▸";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.technologies-resume,
+.project-link-resume {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.technologies-resume strong,
+.project-link-resume strong {
+  color: var(--text-primary);
+}
+
+.project-link-resume a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+.project-link-resume a:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+.skills-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-category-resume {
+  padding: 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.skill-category-resume strong {
+  color: var(--text-primary);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.8rem;
+}
+
+.certification-item {
+  padding: 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 100px 0 60px;
+  }
+  
+  .resume-content {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+  
+  .resume-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .resume-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .navbar,
+  .download-button,
+  footer {
+    display: none;
+  }
+  
+  .resume {
+    padding: 0;
+    background: white;
+  }
+  
+  .resume-content {
+    box-shadow: none;
+    padding: 1rem;
+    background: white;
+    color: black;
+  }
+  
+  /* Ensure print has good contrast */
+  .resume-header h1,
+  .resume-header h2,
+  .highlighted,
+  .resume-item-header h4,
+  .resume-item-header h5,
+  .skill-category-resume strong {
+    color: black !important;
+  }
+  
+  .resume-achievements li,
+  .technologies-resume,
+  .project-link-resume,
+  .skill-category-resume,
+  .certification-item {
+    color: #333 !important;
+  }
+}
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/styles/components/Skills.css]
+==
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.skill-category {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid var(--accent-primary);
+  padding-bottom: 0.5rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+}
+
+.languages-section {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.languages-section h3 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.language-item {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  border-left: 3px solid var(--accent-primary);
+}
+
+.language-item strong {
+  color: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+==
+[Source Files: .js]
+==
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/data/education.js]
+==
+export const education = [
+  {
+    id: 1,
+    institution: "Purwadhika Digital Technology School",
+    location: "Online, ID",
+    degree: "Data Science & Machine Learning Digital Talent Incubator Program",
+    period: "Sept 2024 – Apr 2025",
+    details: {
+      score: "Final Score: 84.41",
+      competencies: [
+        "Python development skills (data structures, control flow, functions, OOP), statistical analysis",
+        "SQL (DDL, DML, DQL) and Python analytics stack (NumPy, Pandas, Matplotlib, Plotly). Experienced in building interactive Tableau dashboards for business insights",
+        "End-to-end model development including regression, classification, clustering, recommendation systems, time-series forecasting, text mining, ensemble learning, and hyperparameter optimization",
+        "Hands-on experience deploying pipelines and models on Google Cloud Platform (Vertex AI, Cloud Storage, BigQuery)"
+      ]
+    }
+  },
+  {
+    id: 2,
+    institution: "Universitas Gadjah Mada",
+    location: "Yogyakarta, ID",
+    degree: "Bachelor of Engineering, Engineering Physics",
+    period: "2016 – 2022",
+    details: {
+      gpa: "GPA: 3.27 /4.00",
+      coursework: ["Artificial Intelligence", "Probability and Statistics", "Linear Algebra", "Programming"],
+      thesis: "Implementation of Online Fault Diagnosis in Chemical Process Based on Fisher Discriminant Analysis"
+    }
+  }
+];
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/data/experience.js]
+==
+export const professionalExperience = [
+  {
+    id: 1,
+    company: "Asia Pacific Resources International Ltd. (APRIL)",
+    location: "Riau, ID",
+    position: "Data Scientist",
+    period: "Sept 2025 - Now",
+    achievements: [
+      "Built an early sheet-break detection model using ML + XAI, enabling 30 - 40 minute earlier warnings and reducing downtime costs by around $10,000 per incident",
+      "Developed Databricks ETL pipelines processing 10k+ daily records for automated, reliable data loading",
+      "Integrated production analytics across Fiber → Mill, improving cross-department visibility and reducing manual reporting time by 40%",
+      "Served as part of APRIL’s Analytics Center of Excellence (ACoE), supporting enterprise-wide analytics initiatives",
+      "Created a web-based digital form system to replace Excel, cutting manual entry errors by 80% and enabling real-time database updates"
+    ]
+  },
+  {
+    id: 2,
+    company: "Nomura Research Institute Indonesia",
+    location: "Jakarta, ID",
+    position: "Machine Learning Annotator Intern",
+    period: "Jan 2025 - June 2025",
+    achievements: [
+      "Annotated over 500 bounding boxes or 200 segmentation masks daily for object detection tasks using CVAT for image and video datasets",
+      "Collaborated with the machine learning team to improve dataset quality, refining annotation guidelines and workflows",
+      "Validated predictions from object detection models (YOLO), ensuring high labeling consistency and accuracy"
+    ]
+  },
+  {
+    id: 3,
+    company: "PT Indonesia Power",
+    location: "Jakarta, ID",
+    position: "Control and Instrumentation, Engineering Intern",
+    period: "Jan 2019",
+    achievements: [
+      "Analyzed conveyor malfunctions using control theory and engineering data; recommended logic improvements to boost system reliability",
+      "Prepared technical documentation and supported cross-functional teams in implementing process enhancements"
+    ]
+  }
+];
+
+export const organizationExperience = [
+  {
+    id: 1,
+    organization: "Ikatan Mahasiswa Teknologi Instrumentasi (KAMALOGIS) – Yogyakarta",
+    position: "Head of Media",
+    period: "Aug 2018 – Aug 2019",
+    achievements: [
+      "Led the Media Division and maintained organizational communication channels",
+      "Launched the organization's website and managed the content database"
+    ]
+  },
+  {
+    id: 2,
+    organization: "Ikatan Mahasiswa Teknologi Instrumentasi (KAMALOGIS) – Yogyakarta",
+    position: "Staff of Media",
+    period: "Aug 2017 – Aug 2018",
+    achievements: [
+      "Managed social media content and improved online engagement",
+      "Designed visual assets for online/offline communication"
+    ]
+  }
+];
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/data/projects.js]
+==
+export const projects = [
+  {
+    id: 1,
+    title: "Hotel Booking Cancellation Analysis",
+    description: "Predicted hotel booking cancellations and identified key revenue-impact factors. Built a Streamlit app for single/batch predictions and created Tableau dashboards for business insights.",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "XGBoost", "LightGBM", "Tableau"],
+    link: "https://github.com/kevinrioharris/Hotel_Booking_Demand",
+    image: "/hotel-pic.jpeg",
+    className: "hotel"
+  },
+  {
+    id: 2,
+    title: "Telco Customer Churn Analysis",
+    description: "Built a machine learning pipeline to predict customer churn using Python. Implemented EDA, feature engineering, and classification models. Deployed a Streamlit web app with real-time and batch prediction capabilities.",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "XGBoost", "LightGBM"],
+    link: "https://github.com/kevinrioharris/Telco_Customer_Churn_Analysis",
+    image: "/customer-churn.jpeg",
+    className: "telco"
+  },
+  {
+    id: 3,
+    title: "TransJakarta Analysis (2024)",
+    description: "Analyzed commuter patterns using tap-in/out data to identify bottlenecks and optimize routes. Visualized findings using Python geospatial libraries.",
+    technologies: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib", "Tableau"],
+    link: "https://github.com/kevinrioharris/Transjakarta-Analysis-April-2023",
+    image: "/transjakarta-pic.jpeg",
+    className: "transjakarta"
+  },
+  {
+    id: 4,
+    title: "Store Management System",
+    description: "Developed a CRUD system in Python for managing inventory and user purchases in a store.",
+    technologies: ["Python", "SQL", "Flask", "Pandas"],
+    link: "https://github.com/kevinrioharris/Store-Management-System",
+    image: "/store.jpeg",
+    className: "store"
+  }
+];
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/data/skills.js]
+==
+export const skills = {
+  programming: ["Python (NumPy, Pandas, Scikit-learn, TensorFlow, Keras)", "R", "Visual Basic", "Flask", "React"],
+  machineLearning: [
+    "Regression", "Classification", "Clustering", "NLP", 
+    "Time-Series Forecasting", "Recommendation Systems", 
+    "Ensemble Methods", "Hyperparameter Tuning", "Model Explainability (XAI)"
+  ],
+  dataEngineering: ["PostgreSQL", "Databricks", "AWS S3", "Google Cloud Platform (Vertex AI, BigQuery, Cloud Storage)"],
+  visualization: ["Tableau", "Power BI", "Metabase Pro", "Microsoft Excel"],
+  databases: ["PostgreSQL", "MySQL", "SQLite"],
+  businessTools: ["Excel (Power Query, Pivot Tables)", "PowerPoint", "Word", "Visio"],
+  languages: [
+    { language: "Bahasa Indonesia", level: "Native" },
+    { language: "English", level: "Fluent (C2 EF Set Certified)" },
+    { language: "Japanese", level: "Intermediate" }
+  ]
+};
+
+==
+[/Users/kevin/Work/kevinrioharris.github.io/src/index.js]
+==
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+(No extra files found based on EXTRA_FILES_TO_INCLUDE.)
