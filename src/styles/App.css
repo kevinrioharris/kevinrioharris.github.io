@@ -21,12 +21,15 @@
   --navbar-bg: rgba(26, 26, 26, 0.7);
   --navbar-bg-scrolled: rgba(26, 26, 26, 0.95);
   --blob-opacity: 0.25;
+  --badge-success-bg: rgba(5, 150, 105, 0.12);
+  --badge-success-border: rgba(5, 150, 105, 0.5);
+  --badge-success-text: #34d399;
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f1f5f9;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #eef2f9;
   --bg-card: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #475569;
@@ -34,10 +37,13 @@
   --accent-primary: #2563eb;
   --accent-secondary: #3b82f6;
   --border-color: #e2e8f0;
-  --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
-  --navbar-bg: rgba(255, 255, 255, 0.7);
-  --navbar-bg-scrolled: rgba(255, 255, 255, 0.85);
-  --blob-opacity: 0.12;
+  --shadow: 0 10px 25px -8px rgba(15, 23, 42, 0.15);
+  --navbar-bg: rgba(248, 250, 252, 0.75);
+  --navbar-bg-scrolled: rgba(248, 250, 252, 0.92);
+  --blob-opacity: 0.14;
+  --badge-success-bg: rgba(5, 150, 105, 0.08);
+  --badge-success-border: rgba(5, 150, 105, 0.35);
+  --badge-success-text: #047857;
 }
 
 html {
@@ -143,18 +149,14 @@ body {
   left: 130%;
 }
 
-.btn.primary {
-  background-color: var(--accent-primary);
-  color: white;
-}
-
+.btn.primary,
 .btn.secondary {
-  background-color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   color: white;
 }
 
 .btn.tertiary {
-  background-color: #059669;
+  background: linear-gradient(135deg, #059669, #34d399);
   color: white;
 }
 
@@ -175,6 +177,16 @@ section {
 
 section:nth-child(even) {
   background-color: var(--bg-secondary);
+}
+
+.section-eyebrow {
+  text-align: center;
+  color: var(--accent-secondary);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 h2 {

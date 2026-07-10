@@ -30,6 +30,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills">
       <div className="container">
+        <p className="section-eyebrow">Toolkit</p>
         <h2>Skills</h2>
 
         <div className="skills-grid">

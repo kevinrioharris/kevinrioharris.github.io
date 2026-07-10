@@ -24,6 +24,7 @@ const About = () => {
             <img src="/kevin-profile.jpeg" alt="Kevin Rio Harristyando" />
           </div>
           <div className="about-text">
+            <p className="section-eyebrow">Get To Know Me</p>
             <h2>Professional Summary</h2>
             <p>
               Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive

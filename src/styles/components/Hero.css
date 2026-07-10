@@ -64,9 +64,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(5, 150, 105, 0.12);
-  border: 1px solid rgba(5, 150, 105, 0.5);
-  color: #34d399;
+  background: var(--badge-success-bg);
+  border: 1px solid var(--badge-success-border);
+  color: var(--badge-success-text);
   padding: 0.4rem 1rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -79,7 +79,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #34d399;
+  background: var(--badge-success-text);
   position: relative;
 }
 
@@ -91,7 +91,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #34d399;
+  background: var(--badge-success-text);
   animation: pulseRing 1.8s ease-out infinite;
 }
 

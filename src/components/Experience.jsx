@@ -56,6 +56,7 @@ const Experience = () => {
   return (
     <section id="experience" className="experience">
       <div className="container">
+        <p className="section-eyebrow">Career Journey</p>
         <h2>Professional Experience</h2>
 
         <div className="experience-timeline">

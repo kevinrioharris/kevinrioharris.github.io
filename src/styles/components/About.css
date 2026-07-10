@@ -24,6 +24,10 @@
   box-shadow: 0 25px 50px rgba(59, 130, 246, 0.3);
 }
 
+.about-text .section-eyebrow {
+  text-align: left;
+}
+
 .about-text h2 {
   text-align: left;
   margin-bottom: 2rem;
@@ -76,6 +80,7 @@
     text-align: center;
   }
   
+  .about-text .section-eyebrow,
   .about-text h2 {
     text-align: center;
   }

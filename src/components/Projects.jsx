@@ -70,6 +70,7 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <div className="container">
+        <p className="section-eyebrow">Selected Work</p>
         <h2>Projects Experience</h2>
         <div className="project-grid">
           {projects.map((project, index) => (

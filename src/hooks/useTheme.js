@@ -7,7 +7,7 @@ const getInitialTheme = () => {
     const attr = document.documentElement.getAttribute('data-theme');
     if (attr === 'light' || attr === 'dark') return attr;
   }
-  return 'dark';
+  return 'light';
 };
 
 export const useTheme = () => {

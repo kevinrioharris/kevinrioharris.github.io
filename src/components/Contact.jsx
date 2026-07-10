@@ -8,6 +8,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="container">
         <div className="reveal" ref={ref}>
+          <p className="section-eyebrow">Let's Connect</p>
           <h2>Contact Me</h2>
           <p>I'm actively looking for new opportunities — feel free to reach out via email or connect with me on LinkedIn</p>
 
