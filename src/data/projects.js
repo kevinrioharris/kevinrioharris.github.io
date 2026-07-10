@@ -31,7 +31,7 @@ export const projects = [
     title: "Bachelor's Thesis: Fault Diagnosis for Chemical Process",
     description: "Developed a PCA + Fisher Discriminant Analysis system for online fault diagnosis in chemical processes, improving detection accuracy by 13.09%. Published in the Fault Diagnosis Journal.",
     technologies: ["PCA", "Fisher Discriminant Analysis", "Fault Diagnosis"],
-    link: "#",
+    link: "https://etd.repository.ugm.ac.id/penelitian/detail/214425",
     icon: "🎓",
     className: "thesis"
   }
