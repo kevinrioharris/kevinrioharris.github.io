@@ -40,10 +40,33 @@
   font-size: 0.9rem;
   font-weight: 500;
   transition: transform 0.2s ease;
+  opacity: 0;
+  transform: scale(0.85) translateY(6px);
+}
+
+.skill-category.is-visible .skill-tag {
+  animation: tagIn 0.45s ease forwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+@keyframes tagIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .skill-tag:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-tag {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }
 
 .languages-section {

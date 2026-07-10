@@ -4,36 +4,24 @@ export const professionalExperience = [
     company: "Asia Pacific Resources International Ltd. (APRIL)",
     location: "Riau, ID",
     position: "Data Scientist",
-    period: "Sept 2025 - Now",
+    period: "Sept 2025 - Present",
     achievements: [
-      "Built an early sheet-break detection model using ML + XAI, enabling 30 - 40 minute earlier warnings and reducing downtime costs by around $10,000 per incident",
-      "Developed Databricks ETL pipelines processing 10k+ daily records for automated, reliable data loading",
-      "Integrated production analytics across Fiber → Mill, improving cross-department visibility and reducing manual reporting time by 40%",
-      "Served as part of APRIL’s Analytics Center of Excellence (ACoE), supporting enterprise-wide analytics initiatives",
-      "Created a web-based digital form system to replace Excel, cutting manual entry errors by 80% and enabling real-time database updates"
+      "Built a sheet-break detection ML system (PyTorch + explainable AI) delivering 30-40 min predictive alerts, cutting downtime losses of ~$10K/hour",
+      "Built PySpark ETL pipelines processing 10,000+ daily sensor records, orchestrated via Airflow",
+      "Configured Databricks Genie with MetricViews and built a GenAI agent using AWS Bedrock, letting non-technical stakeholders query production data in natural language and get real-time answers, cutting ad-hoc reporting requests to the data team",
+      "Built an integrated FastAPI + React dashboard consolidating data from multiple internal systems via APIs, replacing manual Excel workflows",
+      "Built supply chain analytics dashboards, reducing manual reporting by 40%"
     ]
   },
   {
     id: 2,
     company: "Nomura Research Institute Indonesia",
     location: "Jakarta, ID",
-    position: "Machine Learning Annotator Intern",
-    period: "Jan 2025 - June 2025",
+    position: "Machine Learning Annotator",
+    period: "Jan 2025 - Aug 2025",
     achievements: [
-      "Annotated over 500 bounding boxes or 200 segmentation masks daily for object detection tasks using CVAT for image and video datasets",
-      "Collaborated with the machine learning team to improve dataset quality, refining annotation guidelines and workflows",
-      "Validated predictions from object detection models (YOLO), ensuring high labeling consistency and accuracy"
-    ]
-  },
-  {
-    id: 3,
-    company: "PT Indonesia Power",
-    location: "Jakarta, ID",
-    position: "Control and Instrumentation, Engineering Intern",
-    period: "Jan 2019",
-    achievements: [
-      "Analyzed conveyor malfunctions using control theory and engineering data; recommended logic improvements to boost system reliability",
-      "Prepared technical documentation and supported cross-functional teams in implementing process enhancements"
+      "Annotated 500+ bounding boxes/day for computer vision datasets using CVAT",
+      "Validated YOLO predictions and refined labeling guidelines"
     ]
   }
 ];

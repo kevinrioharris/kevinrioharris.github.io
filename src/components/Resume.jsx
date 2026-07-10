@@ -3,30 +3,10 @@ import { professionalExperience, organizationExperience } from '../data/experien
 import { projects } from '../data/projects';
 import { education } from '../data/education';
 import { skills } from '../data/skills';
+import { certifications } from '../data/certifications';
 import '../styles/components/Resume.css';
 
 const Resume = () => {
-  const certifications = [
-    "Data Analyst Associate – Datacamp (2024)",
-    "Google Data Analytics Certificate – Google (2024)",
-    "Google Business Intelligence – Google (2024)",
-    "Microsoft Power BI Data Analyst – Microsoft (2024)",
-    "Mathematics for Machine Learning – Imperial College London (2024)",
-    "DeepLearning.AI TensorFlow Developer – Coursera (2024)",
-    "Machine Learning Specialization – University of Washington (2024)",
-    "Machine Learning Specialization – Stanford University & DeepLearning.AI (2023)",
-    "IBM Data Science – IBM (2023)",
-    "Data Scientist Professional with Python – Datacamp (2023)",
-    "Machine Learning Scientist with Python – Datacamp (2023)",
-    "Data Scientist with Python – Datacamp (2023)",
-    "Data Analyst in SQL – Datacamp (2023)",
-    "Data Analyst in Tableau – Datacamp (2023)",
-    "Deep Learning in Python – Datacamp (2023)",
-    "Artificial Intelligence (AI) Fundamentals – Datacamp (2023)",
-    "English Proficiency (C2 Level) – EF SET (2024)",
-    "UNHCR Delegate, Asia Youth International MUN – Putrajaya, Malaysia (2019)"
-  ];
-
   return (
     <section id="resume" className="resume">
       <div className="container">
@@ -34,14 +14,14 @@ const Resume = () => {
           {/* Header Section */}
           <header className="resume-header">
             <h1>Kevin Rio Harristyando</h1>
-            <h2>Data Scientist & Machine Learning Enthusiast</h2>
+            <h2>Data Scientist | Industrial Machine Learning</h2>
             <div className="contact-info-resume">
               <p>Jakarta, ID | (+62) 82136276405 | kevinrioharris@gmail.com</p>
               <p>linkedin.com/in/kevinrioharristyando/ | https://kevinrioharris.github.io/</p>
             </div>
-            <a 
-              href="https://drive.usercontent.google.com/download?id=1xRkqdhdLy81mDHqTBhoGz_qYmnPoqkwx&export=download&authuser=0&confirm=t&uuid=abe89357-a4ca-4b88-895c-f2be7a71c800&at=ALoNOglqid_1VAGrYfkJNa9M6jlb:1746781970908" 
-              className="btn primary download-button" 
+            <a
+              href="/Kevin_Rio_Harristyando_CV.pdf"
+              className="btn primary download-button"
               download
             >
               Download Resume PDF
@@ -52,10 +32,11 @@ const Resume = () => {
           <div className="resume-section">
             <h3 className="highlighted">Professional Summary</h3>
             <p>
-              Data Scientist with hands-on experience in machine learning, Explainable AI (XAI), data engineering, and applied analytics. 
-              Built end-to-end ML systems, including an early sheet-break detection model with XAI insights that reduced downtime losses by $5,000 per incident, 
-              and automated ETL pipelines processing 10k+ daily records. Skilled in developing production-ready models, deploying apps on Streamlit and GCP, 
-              and translating complex model outputs into clear, actionable insights. Passionate about solving operational challenges with scalable, data-driven solutions.
+              Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive
+              models to autonomous agents. Delivered a real-time predictive maintenance system saving an estimated
+              $10K/hour in downtime, and a GenAI agent (AWS Bedrock + Databricks Genie) that automated
+              natural-language analytics for non-technical teams. Full-stack across the ML lifecycle: PyTorch,
+              Databricks, Airflow, FastAPI, React.
             </p>
           </div>
 
@@ -80,9 +61,9 @@ const Resume = () => {
             ))}
           </div>
 
-          {/* Projects Experience */}
+          {/* Selected Projects */}
           <div className="resume-section">
-            <h3 className="highlighted">Projects Experience</h3>
+            <h3 className="highlighted">Selected Projects</h3>
             {projects.map(project => (
               <div key={project.id} className="resume-item">
                 <h4>{project.title}</h4>
@@ -90,7 +71,7 @@ const Resume = () => {
                 <div className="technologies-resume">
                   <strong>Technologies:</strong> {project.technologies.join(', ')}
                 </div>
-                {project.link !== "#" && (
+                {project.link && project.link !== '#' && (
                   <div className="project-link-resume">
                     <strong>Project Link:</strong> <a href={project.link} target="_blank" rel="noopener noreferrer">{project.link}</a>
                   </div>
@@ -144,22 +125,22 @@ const Resume = () => {
             <h3 className="highlighted">Skills</h3>
             <div className="skills-resume">
               <div className="skill-category-resume">
-                <strong>Programming & Frameworks:</strong> {skills.programming.join(', ')}
-              </div>
-              <div className="skill-category-resume">
                 <strong>Machine Learning:</strong> {skills.machineLearning.join(', ')}
               </div>
               <div className="skill-category-resume">
-                <strong>Data Engineering & Cloud:</strong> {skills.dataEngineering.join(', ')}
+                <strong>GenAI & Agents:</strong> {skills.genAI.join(', ')}
               </div>
               <div className="skill-category-resume">
-                <strong>Visualization & BI Tools:</strong> {skills.visualization.join(', ')}
+                <strong>Data Engineering:</strong> {skills.dataEngineering.join(', ')}
               </div>
               <div className="skill-category-resume">
-                <strong>Databases:</strong> {skills.databases.join(', ')}
+                <strong>Full Stack Development:</strong> {skills.fullStack.join(', ')}
               </div>
               <div className="skill-category-resume">
-                <strong>Business Tools:</strong> {skills.businessTools.join(', ')}
+                <strong>Analytics:</strong> {skills.analytics.join(', ')}
+              </div>
+              <div className="skill-category-resume">
+                <strong>Programming Languages:</strong> {skills.programming.join(', ')}
               </div>
               <div className="skill-category-resume">
                 <strong>Languages:</strong> {skills.languages.map(lang => `${lang.language} (${lang.level})`).join(', ')}
@@ -172,7 +153,7 @@ const Resume = () => {
             <h3 className="highlighted">Licenses & Certifications</h3>
             <div className="certifications-grid">
               {certifications.map((cert, index) => (
-                <div key={index} className="certification-item">{cert}</div>
+                <div key={index} className="certification-item">{cert.name} — {cert.issuer}</div>
               ))}
             </div>
           </div>

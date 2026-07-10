@@ -1,38 +1,38 @@
 export const projects = [
   {
     id: 1,
-    title: "Hotel Booking Cancellation Analysis",
-    description: "Predicted hotel booking cancellations and identified key revenue-impact factors. Built a Streamlit app for single/batch predictions and created Tableau dashboards for business insights.",
-    technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "XGBoost", "LightGBM", "Tableau"],
+    title: "Early Sheet Break Detection with Explainable AI",
+    description: "Built and compared PyTorch neural network and XGBoost models on time-series sensor data to predict sheet breaks 30-40 minutes in advance. Applied SHAP for model explainability, giving operators interpretable, feature-level reasoning behind each alert instead of a black-box prediction. Result: enabled proactive intervention, reducing unplanned downtime losses (~$10K/hour).",
+    technologies: ["PyTorch", "XGBoost", "SHAP", "Time Series", "Explainable AI"],
+    link: "#",
+    icon: "⚡",
+    className: "sheet-break"
+  },
+  {
+    id: 2,
+    title: "Anomaly Prediction for Equipment",
+    description: "Built an LSTM Autoencoder to detect anomalies in industrial equipment sensor time-series, flagging early deviations from normal operating patterns before failure. Result: earlier detection of abnormal equipment behavior, supporting proactive maintenance decisions.",
+    technologies: ["PyTorch", "LSTM Autoencoder", "Anomaly Detection", "Time Series"],
+    link: "#",
+    icon: "📈",
+    className: "anomaly"
+  },
+  {
+    id: 3,
+    title: "Hotel Booking Cancellation Prediction",
+    description: "Built classification models on cancellation drivers, shipped as a Streamlit app for single/batch predictions with Tableau executive dashboards for business insights.",
+    technologies: ["Python", "Scikit-learn", "XGBoost", "Streamlit", "Tableau"],
     link: "https://github.com/kevinrioharris/Hotel_Booking_Demand",
     image: "/hotel-pic.jpeg",
     className: "hotel"
   },
   {
-    id: 2,
-    title: "Telco Customer Churn Analysis",
-    description: "Built a machine learning pipeline to predict customer churn using Python. Implemented EDA, feature engineering, and classification models. Deployed a Streamlit web app with real-time and batch prediction capabilities.",
-    technologies: ["Python", "Pandas", "Scikit-learn", "Streamlit", "XGBoost", "LightGBM"],
-    link: "https://github.com/kevinrioharris/Telco_Customer_Churn_Analysis",
-    image: "/customer-churn.jpeg",
-    className: "telco"
-  },
-  {
-    id: 3,
-    title: "TransJakarta Analysis (2024)",
-    description: "Analyzed commuter patterns using tap-in/out data to identify bottlenecks and optimize routes. Visualized findings using Python geospatial libraries.",
-    technologies: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib", "Tableau"],
-    link: "https://github.com/kevinrioharris/Transjakarta-Analysis-April-2023",
-    image: "/transjakarta-pic.jpeg",
-    className: "transjakarta"
-  },
-  {
     id: 4,
-    title: "Store Management System",
-    description: "Developed a CRUD system in Python for managing inventory and user purchases in a store.",
-    technologies: ["Python", "SQL", "Flask", "Pandas"],
-    link: "https://github.com/kevinrioharris/Store-Management-System",
-    image: "/store.jpeg",
-    className: "store"
+    title: "Bachelor's Thesis: Fault Diagnosis for Chemical Process",
+    description: "Developed a PCA + Fisher Discriminant Analysis system for online fault diagnosis in chemical processes, improving detection accuracy by 13.09%. Published in the Fault Diagnosis Journal.",
+    technologies: ["PCA", "Fisher Discriminant Analysis", "Fault Diagnosis"],
+    link: "#",
+    icon: "🎓",
+    className: "thesis"
   }
 ];
