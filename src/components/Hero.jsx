@@ -4,8 +4,10 @@ import '../styles/components/Hero.css';
 
 const ROLES = [
   'Data Scientist',
-  'Industrial Machine Learning',
-  'GenAI & Agents Builder'
+  'ML Engineer',
+  'AI Engineer',
+  'Data Engineer',
+  'Data Analyst'
 ];
 
 const Hero = () => {
