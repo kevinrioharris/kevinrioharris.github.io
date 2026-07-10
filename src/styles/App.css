@@ -24,6 +24,9 @@
   --badge-success-bg: rgba(5, 150, 105, 0.12);
   --badge-success-border: rgba(5, 150, 105, 0.5);
   --badge-success-text: #34d399;
+  --mesh-1: rgba(59, 130, 246, 0.16);
+  --mesh-2: rgba(139, 92, 246, 0.14);
+  --mesh-3: rgba(5, 150, 105, 0.12);
 }
 
 :root[data-theme="light"] {
@@ -44,6 +47,9 @@
   --badge-success-bg: rgba(5, 150, 105, 0.08);
   --badge-success-border: rgba(5, 150, 105, 0.35);
   --badge-success-text: #047857;
+  --mesh-1: rgba(59, 130, 246, 0.10);
+  --mesh-2: rgba(139, 92, 246, 0.09);
+  --mesh-3: rgba(5, 150, 105, 0.08);
 }
 
 html {
@@ -55,6 +61,13 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at 8% 10%, var(--mesh-1), transparent 42%),
+    radial-gradient(circle at 92% 6%, var(--mesh-2), transparent 42%),
+    radial-gradient(circle at 10% 90%, var(--mesh-3), transparent 45%),
+    radial-gradient(circle at 90% 88%, var(--mesh-1), transparent 45%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -173,10 +186,6 @@ body {
 /* Section Spacing */
 section {
   padding: 80px 0;
-}
-
-section:nth-child(even) {
-  background-color: var(--bg-secondary);
 }
 
 .section-eyebrow {
