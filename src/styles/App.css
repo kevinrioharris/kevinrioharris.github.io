@@ -1,11 +1,13 @@
-/* Global Styles - Dark Theme */
+/* Global Styles - supports dark and light themes via [data-theme] on <html> */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
   --bg-primary: #0a0a0a;
   --bg-secondary: #1a1a1a;
   --bg-card: #2d2d2d;
@@ -16,6 +18,26 @@
   --accent-secondary: #60a5fa;
   --border-color: #404040;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  --navbar-bg: rgba(26, 26, 26, 0.7);
+  --navbar-bg-scrolled: rgba(26, 26, 26, 0.95);
+  --blob-opacity: 0.25;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-primary: #2563eb;
+  --accent-secondary: #3b82f6;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08);
+  --navbar-bg: rgba(255, 255, 255, 0.7);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.85);
+  --blob-opacity: 0.12;
 }
 
 html {
@@ -27,7 +49,7 @@ body {
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {

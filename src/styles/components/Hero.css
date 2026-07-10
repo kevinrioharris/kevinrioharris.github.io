@@ -1,6 +1,6 @@
 .hero {
   background: var(--bg-primary);
-  color: white;
+  color: var(--text-primary);
   padding: 150px 0 100px;
   text-align: center;
   min-height: 100vh;
@@ -32,7 +32,7 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-  opacity: 0.25;
+  opacity: var(--blob-opacity);
   pointer-events: none;
   z-index: 0;
 }

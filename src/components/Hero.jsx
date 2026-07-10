@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { scrollToId } from '../utils/scroll';
 import '../styles/components/Hero.css';
 
 const ROLES = [
@@ -11,6 +12,11 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState('');
   const [deleting, setDeleting] = useState(false);
+
+  const handleAnchorClick = (id) => (e) => {
+    e.preventDefault();
+    scrollToId(id);
+  };
 
   useEffect(() => {
     const currentRole = ROLES[roleIndex];
@@ -64,16 +70,16 @@ const Hero = () => {
           </div>
           <div className="hero-buttons">
             <div className="top-buttons">
-              <a href="#projects" className="btn primary">View My Projects</a>
+              <a href="/" onClick={handleAnchorClick('projects')} className="btn primary">View My Projects</a>
               <a href="/resume" className="btn secondary">View My Resume</a>
             </div>
             <div className="bottom-button">
-              <a href="#contact" className="btn tertiary">Contact Me</a>
+              <a href="/" onClick={handleAnchorClick('contact')} className="btn tertiary">Contact Me</a>
             </div>
           </div>
         </div>
       </div>
-      <a href="#about" className="scroll-cue" aria-label="Scroll to About section">
+      <a href="/" onClick={handleAnchorClick('about')} className="scroll-cue" aria-label="Scroll to About section">
         <span></span>
       </a>
     </section>

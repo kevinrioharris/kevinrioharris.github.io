@@ -10,6 +10,17 @@
       content="Kevin Rio Harristyando - Data Scientist building ML and GenAI systems for industrial machine learning"
     />
     <title>Kevin Rio Harristyando | Data Scientist - Industrial Machine Learning</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('kevin-portfolio-theme');
+          var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
