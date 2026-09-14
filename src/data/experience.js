@@ -4,13 +4,14 @@ export const professionalExperience = [
     company: "Asia Pacific Resources International Ltd. (APRIL)",
     location: "Riau, ID",
     position: "Data Scientist",
-    period: "Sept 2025 - Present",
+    period: "Sept 2025 - Sept 2026",
     achievements: [
-      "Built a sheet-break detection ML system (PyTorch + explainable AI) delivering 30-40 min predictive alerts, cutting downtime losses of ~$10K/hour",
-      "Built PySpark ETL pipelines processing 10,000+ daily sensor records, orchestrated via Airflow",
-      "Configured Databricks Genie with MetricViews and built a GenAI agent using AWS Bedrock, letting non-technical stakeholders query production data in natural language and get real-time answers, cutting ad-hoc reporting requests to the data team",
-      "Built an integrated FastAPI + React dashboard consolidating data from multiple internal systems via APIs, replacing manual Excel workflows",
-      "Built supply chain analytics dashboards, reducing manual reporting by 40%"
+      "Built an ML-based sheet-break detection system using PyTorch + XAI, delivering 30-minute advance warnings and helping prevent approximately US$10K/hour in production downtime",
+      "Automated mill reporting pipelines using PI Web API and PI SDK, processing 10,000+ industrial sensor records daily and reducing manual data preparation",
+      "Deployed an automated loop-monitoring system across 4 RGE mills — APRIL, APR, Asia Symbol, and Bracell — spanning Indonesia, China, and Brazil, enabling real-time monitoring and control of production loops",
+      "Built a wood supply-demand dashboard with end-to-end harvesting simulation, adopted by 30+ active users across multiple departments",
+      "Developed GenAI agents using Copilot Studio, Databricks Genie, and AWS Bedrock for natural-language querying of documents and production data, including an agent that automated monthly reporting across 4 business units, reducing recurring ad-hoc reporting requests",
+      "Developed and deployed FastAPI + React applications to replace manual Excel-based workflows, reducing reporting time by 40% and enabling real-time data updates"
     ]
   },
   {

@@ -34,7 +34,7 @@ const Resume = () => {
             <p>
               Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive
               models to autonomous agents. Delivered a real-time predictive maintenance system saving an estimated
-              $10K/hour in downtime, and a GenAI agent (AWS Bedrock + Databricks Genie) that automated
+              $10K/hour in downtime, and a GenAI agent (Microsoft Copilot Studio + Databricks Genie) that automated
               natural-language analytics for non-technical teams. Full-stack across the ML lifecycle: PyTorch,
               Databricks, Airflow, FastAPI, React.
             </p>

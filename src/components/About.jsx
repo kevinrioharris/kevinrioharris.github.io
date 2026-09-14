@@ -29,7 +29,7 @@ const About = () => {
             <p>
               Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive
               models to autonomous agents. Delivered a real-time predictive maintenance system saving an estimated
-              $10K/hour in downtime, and a GenAI agent (AWS Bedrock + Databricks Genie) that automated
+              $10K/hour in downtime, and a GenAI agent (Microsoft Copilot Studio + Databricks Genie) that automated
               natural-language analytics for non-technical teams.
             </p>
             <p>
@@ -40,7 +40,7 @@ const About = () => {
 
             <div className="quick-stats">
               <Stat target={10} prefix="$" suffix="K/hr" label="Downtime cost savings" />
-              <Stat target={40} suffix=" min" label="Earlier predictive alerts (30-40 min)" />
+              <Stat target={30} suffix=" min" label="Advance predictive alerts" />
               <Stat target={10000} suffix="+" label="Daily sensor records processed" />
               <Stat target={40} suffix="%" label="Less manual reporting" />
             </div>

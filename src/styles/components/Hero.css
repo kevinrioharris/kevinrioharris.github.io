@@ -15,50 +15,6 @@
   z-index: 1;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
-}
-
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: var(--blob-opacity);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero-blob-1 {
-  width: 420px;
-  height: 420px;
-  top: -100px;
-  left: -120px;
-  background: var(--accent-primary);
-  animation: floatBlob 12s ease-in-out infinite;
-}
-
-.hero-blob-2 {
-  width: 360px;
-  height: 360px;
-  bottom: -140px;
-  right: -100px;
-  background: #8b5cf6;
-  animation: floatBlob 14s ease-in-out infinite reverse;
-}
-
-@keyframes floatBlob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -30px) scale(1.1); }
-}
-
 .open-to-work {
   display: inline-flex;
   align-items: center;
@@ -70,13 +26,13 @@
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
 .pulse-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--badge-success-text);
   position: relative;
@@ -95,50 +51,46 @@
 }
 
 @keyframes pulseRing {
-  0% { transform: scale(1); opacity: 0.7; }
+  0% { transform: scale(1); opacity: 0.6; }
   100% { transform: scale(3); opacity: 0; }
 }
 
 .hero-eyebrow {
-  color: var(--accent-secondary);
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  margin-bottom: 0.75rem;
-  position: relative;
+  font-size: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--text-primary);
-  position: relative;
 }
 
 .hero-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 2.25rem;
+  font-weight: 500;
   color: var(--text-secondary);
-  position: relative;
 }
 
 .typewriter {
-  min-height: 2.4rem;
+  min-height: 2.1rem;
 }
 
 .typewriter span {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 500;
+  color: var(--accent-primary);
+  font-weight: 600;
 }
 
 .typewriter .cursor {
-  -webkit-text-fill-color: var(--accent-secondary);
+  color: var(--accent-primary);
   animation: blinkCursor 0.9s step-end infinite;
 }
 
@@ -167,7 +119,7 @@
   width: 4px;
   height: 8px;
   border-radius: 2px;
-  background: var(--accent-secondary);
+  background: var(--text-muted);
   animation: scrollCueMove 1.6s ease infinite;
 }
 
@@ -187,9 +139,10 @@
 }
 
 .contact-info p {
-  font-size: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
   margin-bottom: 1rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .social-links {
@@ -204,16 +157,16 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   text-decoration: underline;
 }
 
 .social-links span {
-  opacity: 0.7;
+  opacity: 0.6;
   color: var(--text-muted);
 }
 
@@ -238,25 +191,25 @@
     padding: 120px 0 80px;
     min-height: 80vh;
   }
-  
+
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-  
+
   .hero-content h2 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
-  
+
   .contact-info p {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
-  
+
   .top-buttons,
   .bottom-button {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn {
     width: 200px;
   }

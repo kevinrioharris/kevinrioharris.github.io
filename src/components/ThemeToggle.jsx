@@ -1,5 +1,6 @@
 import React from 'react';
 import useTheme from '../hooks/useTheme';
+import Icon from './Icon';
 import '../styles/components/ThemeToggle.css';
 
 const ThemeToggle = () => {
@@ -14,7 +15,7 @@ const ThemeToggle = () => {
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
       title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
-      <span className="theme-toggle-icon">{isDark ? '🌙' : '☀️'}</span>
+      <Icon name={isDark ? 'moon' : 'sun'} className="theme-toggle-icon" />
     </button>
   );
 };

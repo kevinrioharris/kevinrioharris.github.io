@@ -14,7 +14,7 @@ export const education = [
     degree: "Bachelor of Engineering, Engineering Physics",
     period: "2016 – 2022",
     details: {
-      gpa: "GPA: 3.27 /4.00",
+      gpa: "GPA: 3.27 / 4.00",
       thesis: "Implementation of Online Fault Diagnosis in Chemical Process Based on Fisher Discriminant Analysis"
     }
   }

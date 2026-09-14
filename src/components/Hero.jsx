@@ -46,8 +46,6 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero-blob hero-blob-1"></div>
-      <div className="hero-blob hero-blob-2"></div>
       <div className="container">
         <div className="hero-content">
           <span className="open-to-work">

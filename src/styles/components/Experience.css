@@ -1,7 +1,7 @@
 .experience-timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .experience-item {
@@ -9,13 +9,12 @@
   padding: 2rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
-  border-left: 4px solid var(--accent-primary);
   border: 1px solid var(--border-color);
-  transition: transform 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .experience-item:hover {
-  transform: translateY(-5px);
+  border-color: var(--accent-primary);
 }
 
 .experience-header {
@@ -29,13 +28,13 @@
 
 .experience-title h3 {
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
 }
 
 .experience-title h4 {
-  color: var(--accent-secondary);
-  font-size: 1.1rem;
+  color: var(--accent-primary);
+  font-size: 1.05rem;
   font-weight: 600;
 }
 
@@ -49,15 +48,19 @@
 
 .location {
   color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
 .period {
-  background: var(--accent-primary);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
@@ -86,7 +89,8 @@
   text-align: center;
   margin: 3rem 0 2rem 0;
   color: var(--text-primary);
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .organization-experience {
@@ -100,8 +104,12 @@
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
-  border-top: 3px solid #059669;
   border: 1px solid var(--border-color);
+  transition: border-color 0.2s ease;
+}
+
+.org-item:hover {
+  border-color: var(--accent-primary);
 }
 
 .org-header {
@@ -119,17 +127,18 @@
 }
 
 .org-period {
-  background: #059669;
-  color: white;
-  padding: 0.2rem 0.6rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
 .org-name {
   color: var(--text-muted);
-  font-style: italic;
   margin-bottom: 1rem;
 }
 
@@ -148,7 +157,7 @@
 
 .org-achievements li:before {
   content: "•";
-  color: #059669;
+  color: var(--accent-primary);
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -159,12 +168,12 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .experience-meta {
     align-items: flex-start;
     margin-left: 0;
   }
-  
+
   .organization-experience {
     grid-template-columns: 1fr;
   }

@@ -15,11 +15,12 @@
 }
 
 .theme-toggle:hover {
-  transform: translateY(-2px) rotate(12deg);
   border-color: var(--accent-primary);
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25);
 }
 
 .theme-toggle-icon {
   display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: var(--text-primary);
 }

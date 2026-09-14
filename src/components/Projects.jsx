@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { projects } from '../data/projects';
 import useReveal from '../hooks/useReveal';
+import Icon from './Icon';
 import '../styles/components/Projects.css';
 
 const ProjectCard = ({ project, index }) => {
@@ -39,7 +40,7 @@ const ProjectCard = ({ project, index }) => {
           <img src={project.image} alt={project.title} />
         ) : (
           <div className={`project-placeholder ${project.className}`}>
-            <span>{project.icon}</span>
+            <Icon name={project.icon} />
           </div>
         )}
       </div>
