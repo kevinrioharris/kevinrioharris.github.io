@@ -1,6 +1,7 @@
 import React from 'react';
 import { professionalExperience, organizationExperience } from '../data/experience';
 import useReveal from '../hooks/useReveal';
+import { highlightMetrics } from '../utils/highlight';
 import '../styles/components/Experience.css';
 
 const ExperienceCard = ({ exp, index }) => {
@@ -9,8 +10,9 @@ const ExperienceCard = ({ exp, index }) => {
     <div
       key={exp.id}
       ref={ref}
-      className={`experience-item reveal reveal-delay-${Math.min(index + 1, 5)}`}
+      className={`experience-item reveal reveal-delay-${Math.min(index + 1, 5)} ${index === 0 ? 'is-current' : ''}`}
     >
+      <span className="timeline-dot" aria-hidden="true" />
       <div className="experience-header">
         <div className="experience-title">
           <h3>{exp.position}</h3>
@@ -23,7 +25,7 @@ const ExperienceCard = ({ exp, index }) => {
       </div>
       <ul className="achievements">
         {exp.achievements.map((achievement, i) => (
-          <li key={i}>{achievement}</li>
+          <li key={i}>{highlightMetrics(achievement)}</li>
         ))}
       </ul>
     </div>
@@ -57,7 +59,7 @@ const Experience = () => {
     <section id="experience" className="experience">
       <div className="container">
         <p className="section-eyebrow">Career Journey</p>
-        <h2>Professional Experience</h2>
+        <h2>Where I&rsquo;ve <span className="serif">shipped</span> things.</h2>
 
         <div className="experience-timeline">
           {professionalExperience.map((exp, index) => (

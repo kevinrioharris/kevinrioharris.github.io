@@ -8,7 +8,7 @@ const SECTION_LINKS = [
   { id: 'about', label: 'About' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
-  { id: 'certifications', label: 'Certifications' },
+  { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' }
 ];
 
@@ -42,23 +42,15 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner container">
-        <button
-          type="button"
-          className={`nav-toggle ${menuOpen ? 'is-open' : ''}`}
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <Link to="/" className="nav-brand" aria-label="Kevin Rio Harristyando, home">
+          <span className="nav-brand-mark">KR</span>
+          <span className="nav-brand-name">Kevin Rio</span>
+        </Link>
 
         <ul className={`nav-links ${menuOpen ? 'is-open' : ''}`}>
-          <li><Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
           {SECTION_LINKS.map((link) => (
             <li key={link.id}>
-              <a href="/" onClick={handleSectionClick(link.id)}>{link.label}</a>
+              <a href={`/#${link.id}`} onClick={handleSectionClick(link.id)}>{link.label}</a>
             </li>
           ))}
           <li><Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link></li>
@@ -66,6 +58,17 @@ const Navbar = () => {
 
         <div className="navbar-actions">
           <ThemeToggle />
+          <button
+            type="button"
+            className={`nav-toggle ${menuOpen ? 'is-open' : ''}`}
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </nav>

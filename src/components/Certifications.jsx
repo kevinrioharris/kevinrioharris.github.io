@@ -20,7 +20,7 @@ const Certifications = () => {
     <section id="certifications" className="certifications">
       <div className="container">
         <p className="section-eyebrow">Credentials</p>
-        <h2>Licenses & Certifications</h2>
+        <h2>Licenses &amp; <span className="serif">certifications</span></h2>
         <div className="cert-grid">
           {certifications.map((cert, index) => (
             <CertCard cert={cert} index={index} key={cert.name} />

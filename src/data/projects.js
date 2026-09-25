@@ -6,7 +6,8 @@ export const projects = [
     technologies: ["PyTorch", "XGBoost", "SHAP", "Time Series", "Explainable AI"],
     link: "#",
     icon: "zap",
-    className: "sheet-break"
+    className: "sheet-break",
+    category: "Predictive Maintenance"
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const projects = [
     technologies: ["PyTorch", "LSTM Autoencoder", "Anomaly Detection", "Time Series"],
     link: "#",
     icon: "trending-up",
-    className: "anomaly"
+    className: "anomaly",
+    category: "Anomaly Detection"
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export const projects = [
     technologies: ["PI Web API", "PI SDK", "Python", "Real-Time Monitoring"],
     link: "#",
     icon: "refresh",
-    className: "loop-monitoring"
+    className: "loop-monitoring",
+    category: "Real-Time Monitoring"
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const projects = [
     technologies: ["Python", "FastAPI", "React", "Simulation"],
     link: "#",
     icon: "tree",
-    className: "wood-dashboard"
+    className: "wood-dashboard",
+    category: "Simulation & Dashboards"
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ export const projects = [
     technologies: ["Copilot Studio", "Databricks Genie", "AWS Bedrock", "GenAI"],
     link: "#",
     icon: "bot",
-    className: "genai-agents"
+    className: "genai-agents",
+    category: "GenAI Agents"
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ export const projects = [
     technologies: ["Python", "Scikit-learn", "XGBoost", "Streamlit", "Tableau"],
     link: "https://github.com/kevinrioharris/Hotel_Booking_Demand",
     image: "/hotel-pic.jpeg",
-    className: "hotel"
+    className: "hotel",
+    category: "Classification"
   },
   {
     id: 7,
@@ -60,6 +66,7 @@ export const projects = [
     technologies: ["PCA", "Fisher Discriminant Analysis", "Fault Diagnosis"],
     link: "https://etd.repository.ugm.ac.id/penelitian/detail/214425",
     icon: "graduation-cap",
-    className: "thesis"
+    className: "thesis",
+    category: "Research"
   }
 ];

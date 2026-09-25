@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export const useReveal = (options = {}) => {
+export const useReveal = ({ threshold = 0.12, rootMargin = '0px 0px -8% 0px' } = {}) => {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -21,12 +21,12 @@ export const useReveal = (options = {}) => {
           }
         });
       },
-      { threshold: 0.15, ...options }
+      { threshold, rootMargin }
     );
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [options]);
+  }, [threshold, rootMargin]);
 
   return ref;
 };

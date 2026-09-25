@@ -7,8 +7,8 @@ const Stat = ({ target, suffix, prefix, label }) => {
   const [ref, value] = useCountUp(target);
   return (
     <div className="stat" ref={ref}>
-      <h3>{prefix}{value.toLocaleString()}{suffix}</h3>
-      <p>{label}</p>
+      <p className="stat-value">{prefix}{value.toLocaleString()}<span>{suffix}</span></p>
+      <p className="stat-label">{label}</p>
     </div>
   );
 };
@@ -21,27 +21,33 @@ const About = () => {
       <div className="container">
         <div className="about-container reveal" ref={revealRef}>
           <div className="about-photo">
-            <img src="/kevin-profile.jpeg" alt="Kevin Rio Harristyando" />
+            <div className="about-photo-frame">
+              <img src="/kevin-profile.jpeg" alt="Kevin Rio Harristyando" />
+            </div>
+            <div className="about-photo-tag">
+              <span className="about-photo-dot" />
+              Engineering Physics · UGM
+            </div>
           </div>
           <div className="about-text">
             <p className="section-eyebrow">Get To Know Me</p>
-            <h2>Professional Summary</h2>
+            <h2>Any dataset, one goal: <span className="serif">better decisions</span>.</h2>
             <p>
-              Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive
+              Data Scientist who builds ML, analytics and GenAI systems that solve real business problems end to end, from predictive
               models to autonomous agents. Delivered a real-time predictive maintenance system saving an estimated
               $10K/hour in downtime, and a GenAI agent (Microsoft Copilot Studio + Databricks Genie) that automated
               natural-language analytics for non-technical teams.
             </p>
             <p>
-              Full-stack across the ML lifecycle: PyTorch, Databricks, Airflow, FastAPI, React. Passionate about
-              turning complex model outputs into clear, actionable insights that operators and stakeholders can
-              trust and act on.
+              Full-stack across the ML lifecycle: PyTorch, Databricks, Airflow, FastAPI, React. Open to data
+              problems in any sector. The methods transfer, and I pick up domain context fast. What I care about
+              is turning complex model outputs into clear, actionable insights that stakeholders can trust and act on.
             </p>
 
             <div className="quick-stats">
               <Stat target={10} prefix="$" suffix="K/hr" label="Downtime cost savings" />
               <Stat target={30} suffix=" min" label="Advance predictive alerts" />
-              <Stat target={10000} suffix="+" label="Daily sensor records processed" />
+              <Stat target={10000} suffix="+" label="Daily records processed" />
               <Stat target={40} suffix="%" label="Less manual reporting" />
             </div>
           </div>

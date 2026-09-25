@@ -14,7 +14,7 @@ const Resume = () => {
           {/* Header Section */}
           <header className="resume-header">
             <h1>Kevin Rio Harristyando</h1>
-            <h2>Data Scientist | Industrial Machine Learning</h2>
+            <h2>Data Scientist | Machine Learning &amp; GenAI</h2>
             <div className="contact-info-resume">
               <p>Jakarta, ID | (+62) 82136276405 | kevinrioharris@gmail.com</p>
               <p>linkedin.com/in/kevinrioharristyando/ | https://kevinrioharris.github.io/</p>
@@ -32,7 +32,7 @@ const Resume = () => {
           <div className="resume-section">
             <h3 className="highlighted">Professional Summary</h3>
             <p>
-              Data Scientist who builds ML and GenAI systems that solve real industrial problems, from predictive
+              Data Scientist who builds ML, analytics and GenAI systems that solve real business problems end to end, from predictive
               models to autonomous agents. Delivered a real-time predictive maintenance system saving an estimated
               $10K/hour in downtime, and a GenAI agent (Microsoft Copilot Studio + Databricks Genie) that automated
               natural-language analytics for non-technical teams. Full-stack across the ML lifecycle: PyTorch,

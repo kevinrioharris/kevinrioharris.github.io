@@ -60,7 +60,7 @@ const Education = () => {
     <section id="education" className="education">
       <div className="container">
         <p className="section-eyebrow">Background</p>
-        <h2>Education</h2>
+        <h2>Trained as an <span className="serif">engineer</span> first.</h2>
 
         <div className="education-timeline">
           {education.map((edu, index) => (

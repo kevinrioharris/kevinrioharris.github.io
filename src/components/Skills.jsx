@@ -31,7 +31,7 @@ const Skills = () => {
     <section id="skills" className="skills">
       <div className="container">
         <p className="section-eyebrow">Toolkit</p>
-        <h2>Skills</h2>
+        <h2>The <span className="serif">toolkit</span>, end to end.</h2>
 
         <div className="skills-grid">
           {categories.map((cat, index) => (
@@ -44,7 +44,8 @@ const Skills = () => {
           <div className="languages-grid">
             {skills.languages.map((lang, index) => (
               <div key={index} className="language-item">
-                <strong>{lang.language}:</strong> {lang.level}
+                <strong>{lang.language}</strong>
+                <span>{lang.level}</span>
               </div>
             ))}
           </div>
